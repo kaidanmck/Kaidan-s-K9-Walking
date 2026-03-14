@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kaidan's K9 Walking</title>
+<style>
+body{font-family:Arial, sans-serif;margin:0;background:#f5f5f5;color:#333}
+header{background:#1e6bff;color:white;padding:30px;text-align:center}
+nav{display:flex;justify-content:center;background:#333}
+nav button{background:none;border:none;color:white;padding:14px 20px;cursor:pointer;font-size:16px}
+nav button:hover{background:#575757}
+section{display:none;padding:30px}
+section.active{display:block}
+.card{background:white;padding:20px;border-radius:10px;max-width:700px;margin:auto;box-shadow:0 2px 6px rgba(0,0,0,0.2)}
+footer{text-align:center;padding:20px;background:#222;color:white;margin-top:40px}
+input,textarea{width:100%;padding:10px;margin-top:8px;margin-bottom:16px}
+button.submit{background:#1e6bff;color:white;border:none;padding:10px 16px;border-radius:6px;cursor:pointer}
+</style>
+<script>
+function showPage(page){
+const sections=document.querySelectorAll("section");
+sections.forEach(s=>s.classList.remove("active"));
+document.getElementById(page).classList.add("active");
+}
+</script>
+</head>
+<body>
+
+<header>
+<img src="logo.png" alt="Kaidan's K9 Walking Logo" style="width:120px;margin-bottom:10px" />
+<h1>Kaidan's K9 Walking</h1>
+<h3>Happy Dogs. Happy Walks</h3>
+</header>
+
+<nav>
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('services')">Services</button>
+<button onclick="showPage('about')">About</button>
+<button onclick="showPage('contact')">Contact</button>
+</nav>
+
+<section id="home" class="active">
+<div class="card">
+<h2>Welcome!</h2>
+<p>Welcome to Kaidan's K9 Walking! I provide safe, fun, and reliable dog walking for busy pet owners.</p>
+<p>Your dog will get exercise, fresh air, and lots of attention.</p>
+<p><b>Edit this text anytime to add more info about your business.</b></p>
+</div>
+</section>
+
+<section id="services">
+<div class="card">
+<h2>Services & Prices</h2>
+<ul>
+<li>15 Minute Walk – $10</li>
+<li>30 Minute Walk – $15</li>
+<li>45 Minute Walk – $20</li>
+</ul>
+<p><b>You can easily change these prices by editing this list.</b></p>
+</div>
+</section>
+
+<section id="about">
+<div class="card">
+<h2>About Me</h2>
+<p>Hi! My name is Kaidan and I started Kaidan's K9 Walking because I love dogs and staying active.</p>
+<p>I make sure every dog has a fun and safe walk.</p>
+<p><b>Edit this section to talk about yourself and why people should trust you with their dogs.</b></p>
+</div>
+</section>
+
+<section id="contact">
+<div class="card">
+<h2>Contact</h2>
+<p>Want to book a walk? Send a message!</p>
+<form>
+<label>Name</label>
+<input type="text" placeholder="Your name" />
+
+<label>Email</label>
+<input type="email" placeholder="Your email" />
+
+<label>Message</label>
+<textarea placeholder="Tell me about your dog"></textarea>
+
+<button class="submit">Send</button>
+</form>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Kaidan's K9 Walking</p>
+</footer>
+
+</body>
+</html>
